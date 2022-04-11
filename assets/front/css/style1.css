@@ -1,0 +1,452 @@
+/** Login 13 start **/
+
+.login {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+}
+
+.login .form-info {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.login h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Jost', sans-serif;
+}
+
+.login .form-section {
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.login .login-inner-form .form-group {
+    margin-bottom: 25px;
+}
+
+.login .login-inner-form .form-box {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.login .login-inner-form .form-control {
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    color: #535353;
+    border-radius: 3px;
+    border: 1px solid #efefef;
+    background: #efefef;
+    height: 51px;
+    float: left;
+    width: 100%;
+    padding: 13px 40px 11px 15px;
+}
+
+.login .login-inner-form select.form-control {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+.select_icon {
+    font-size: 14px;
+    top: 20px;
+}
+
+.login .login-inner-form .form-box i {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    font-size: 18px;
+    color: #535353;
+}
+
+.login .form-section a {
+    text-decoration: none;
+}
+
+.login .login-inner-form .forgot {
+    margin: 0;
+    line-height: 45px;
+    color: #efefef;
+    font-size: 15px;
+}
+
+.login .bg-img {
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    z-index: 999;
+    opacity: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 0 0 350px 0;
+}
+
+.bg-img-inner:before {
+    content: "";
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border-radius: 100% 0 100% 100%;
+    background-image: linear-gradient(to bottom, #9dc5e9, #2b9bff);
+}
+
+.login .bg-img-inner:after {
+    content: "";
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    z-index: -1;
+    -webkit-clip-path: polygon(0 0, 30% 0, 70% 10%);
+    clip-path: polygon(0 0, 100% 50%, 100% 80%);
+    background-image: linear-gradient(to bottom, #9dc5e9, #2b9bff);
+}
+
+.login .info {
+    z-index: 999;
+    max-width: 650px;
+}
+
+.login .info p {
+    margin-bottom: 0;
+    line-height: 28px;
+}
+
+.login .form-section .form-check .form-check-input {
+    margin-left: -22px;
+}
+
+.login .center h1 {
+    color: black;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+@keyframes background-text-animation {
+    0% {
+        background-position: left 0px top 50%;
+    }
+    50% {
+        background-position: left 1500px top 50%;
+    }
+    100% {
+        background-position: left 0px top 50%;
+    }
+}
+
+.login .login-inner-form p {
+    margin: 0;
+    color: #efefef;
+}
+
+.login .login-inner-form p a {
+    color: #efefef;
+}
+
+.login .logo img {
+    margin-bottom: 20px;
+    width: 170px;
+}
+
+.login .nav-pills li {
+    display: inline-block;
+}
+
+.login .login-inner-form .form-group.mb-35 {
+    margin-bottom: 35px;
+}
+
+.login .login-inner-form .form-group.mb-30 {
+    margin-bottom: 30px;
+}
+
+.login .login-inner-form .terms {
+    margin-left: 3px;
+}
+
+.login .login-inner-form .form-check {
+    float: left;
+    margin-bottom: 0;
+}
+
+.login .login-inner-form .form-check a {
+    color: #efefef;
+}
+
+.login .login-inner-form .form-check-input {
+    position: absolute;
+    margin-left: 0;
+}
+
+.login .login-inner-form .form-check-label {
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #efefef;
+}
+
+.login .form-section .form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    position: absolute;
+    border: 1px solid #efefef;
+    border-radius: 2px;
+}
+
+.login .form-check-input:focus {
+    border-color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+
+.login .form-check-input:checked {
+    background-color: #9dc5e9 !important;
+    border-color: #9dc5e9 !important;
+}
+
+.login .btn-section {
+    top: 20px;
+    position: absolute;
+    left: 0px;
+    float: right;
+    display: inline-block;
+    width: 100px;
+}
+
+.login .btn-section .link-btn {
+    font-size: 14px;
+    float: left;
+    background: transparent;
+    font-weight: 400;
+    line-height: 50px;
+    width: 120px;
+    text-decoration: none;
+    text-decoration: blink;
+    text-align: center;
+    color: #fff !important;
+    border-radius: 0 50px 50px 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.login .btn-section .active-bg {
+    background-image: linear-gradient(to bottom, #585858, #000000);
+}
+
+.login .btn-section .default-bg {
+    background-image: linear-gradient(to bottom, #9dc5e9, #9dc5e9);
+}
+
+.login .login-inner-form .checkbox a {
+    font-size: 16px;
+    color: #efefef;
+    margin-left: 3px;
+}
+
+.login .form-section {
+    text-align: center;
+}
+
+.login .form-section h3 {
+    font-size: 25px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.login .form-section p {
+    margin: 25px 0 0;
+    font-size: 15px;
+    color: #efefef;
+}
+
+.login .form-section p a {
+    color: #efefef;
+}
+
+.login .form-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 0;
+}
+
+.login .form-section .social-list li {
+    display: inline-block;
+}
+
+.login .form-section .social-list li a {
+    font-size: 13px;
+    font-weight: 600;
+    width: 135px;
+    margin: 0 2px 5px 0;
+    height: 45px;
+    line-height: 45px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background: #fff;
+}
+
+.login .form-section .social-list li a i {
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    float: left;
+    color: #fff;
+}
+
+.login .none-2 {
+    display: none;
+}
+
+.login .btn-theme {
+    color: #fff;
+    text-align: center;
+    border: 2px solid transparent;
+    display: inline-block;
+    padding: 0 50px;
+    position: relative;
+    line-height: 46px;
+    z-index: 1;
+    transition: all .7s ease;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+    width: 100%;
+}
+
+.login .btn-theme:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .7s ease;
+    z-index: -1;
+    border-radius: 3px;
+}
+
+.login .btn-theme:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .7s ease;
+    z-index: -1;
+}
+
+.login .btn-theme:hover {
+    background: transparent;
+}
+
+.login .btn-theme:hover:before {
+    width: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.login .btn-theme:hover:after {
+    width: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.login .btn-lg {
+    padding: 0 30px;
+    line-height: 51px;
+}
+
+.login .btn {
+    box-shadow: none !important;
+}
+
+.login .btn-md {
+    padding: 0 45px;
+    line-height: 41px;
+}
+
+.login .btn-primary {
+    background-image: linear-gradient(to bottom, #2b9bff, #9dc5e9);
+}
+
+.login .btn-primary:before {
+    background-image: linear-gradient(to bottom, #2b9bff, #9dc5e9);
+}
+
+.login .btn-primary:after {
+    background-image: linear-gradient(to bottom, #2b9bff, #9dc5e9);
+}
+
+.login .btn-primary:hover {
+    color: #9dc5e9;
+    border: 2px solid #9dc5e9;
+}
+
+
+/** MEDIA **/
+
+@media (max-width: 992px) {
+    .login .bg-img {
+        display: none;
+    }
+    .login .none-2 {
+        display: block;
+    }
+    .login .btn-section {
+        display: none;
+    }
+    .login .form-section .form-section-innner:before {
+        display: none;
+    }
+    .login .form-section .form-section-innner:after {
+        display: none;
+    }
+}
+
+
+/** Login 13 end **/
