@@ -25,32 +25,36 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <!-- Jquery CDN -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="//geodata.solutions/includes/countrystatecity.js"></script>
         <script src="<?php echo base_url('assets/admin/js/alert.js');?>"></script>
+
     </head>
 
     <body>
 
-        <?php if($this->session->flashdata('success')):?>
-            <script>alert_success("<?php echo $this->session->flashdata('success')?>");</script>
-        <?php endif;?>
-        <?php if($this->session->flashdata('error')):?>
-            <script>alert_danger("<?php echo $this->session->flashdata('error')?>");</script>
-        <?php endif;?>
-        
-        <header>
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg navbar-light  main_header">
-                    <a class="navbar-brand" href="#"><img src="<?= base_url();?>assets/front/images/logo.png" class="img-fluid"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse main_nav justify-content-center" id="navbarNavAltMarkup">
-                        <div class="navbar-nav mx-auto">
-                            <a class="nav-item nav-link" href="<?= base_url();?>">Home</a>
-                            <a class="nav-item nav-link" href="<?= base_url('activity');?>">travel guides</a>
-                        </div>
+      <?php if($this->session->flashdata('success')):?>
+        <script>alert_success("<?php echo $this->session->flashdata('success')?>");</script>
+    <?php endif;?>
+    <?php if($this->session->flashdata('error')):?>
+        <script>alert_danger("<?php echo $this->session->flashdata('error')?>");</script>
+    <?php endif;?>
+
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light  main_header">
+                <a class="navbar-brand" href="#"><img src="<?= base_url();?>assets/front/images/logo.png" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse main_nav justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-item nav-link" href="<?= base_url();?>">Home</a>
+                        <a class="nav-item nav-link" href="<?= base_url('plan');?>">Plan</a>
                         <?php if($this->session->userdata('auth')){ ?>
+                        <a class="nav-item nav-link" href="<?= base_url('other_details');?>">Hotels/Flights</a>
+                        <?php } else { ?>
+                        <?php } ?>
+                    </div>
+                    <?php if($this->session->userdata('auth')){ ?>
                         <div class="navbar-nav">
                             <a class="nav-item nav-link btn_login d-flex justify-content-center" href="<?= base_url('login/logout');?>"><i class="fa  fa-rocket mr-2"></i> log out</a>
                         </div>
@@ -61,7 +65,7 @@
                             up</a>
                         </div>
                     <?php } ?>
-                    </div>
-                </nav>
-            </div>
-        </header>
+                </div>
+            </nav>
+        </div>
+    </header>

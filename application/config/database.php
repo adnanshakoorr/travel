@@ -80,7 +80,7 @@ if(in_array($_SERVER['REMOTE_ADDR'],array('127.0.0.1','::1')))
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'database' => 'adnan_travel',
+		'database' => 'travel',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,

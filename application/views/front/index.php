@@ -1,116 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
 
-    <main>
-        <section class="trip_bg">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <h1 class="text-center heading_main">Plan a new trip</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>section</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid tabs my-5">
+            <div class="row">
+                <div class="col-12 mx-auto px-md-4 px-2">
+                    <div class="text-center mb-5">
+                        <h1 class="tabs-font">Money & Travel</h1>
+                        <a href="<?= base_url('plan'); ?>" class="btn plan-btn">Plan Your Trip</a>
                     </div>
-                    <div class="col-md-6">
-
-                        <div class="form-row d-block d-md-flex position-relative justify-content-center align-items-end trip_select_form">
-                            <label for="" class="where_label">Where to?</label>
-                            <select id="adresCity" name="adresCity" multiple="multiple">
-                                <option value="" selected>e.g. Paris, Hawaii, Japan</option>
-                                <option value="istanbul">istanbul</option>
-                                <option value="Ankara">ankara</option>
-                                <option value="izmir">izmir</option>
-                                <option value="Adana">adana</option>
-                                <option value="Adıyaman">adıyaman</option>
-                                <option value="Afyon">afyon</option>
-                                <option value="Ağrı">ağrı</option>
-                                <option value="Aksaray">aksaray</option>
-                                <option value="Amasya">amasya</option>
-                                <option value="Antalya">antalya</option>
-                                <option value="Ardahan">ardahan</option>
-                                <option value="Artvin">artvin</option>
-                                <option value="Aydın">aydın</option>
-                                <option value="Balıkesir">balıkesir</option>
-                                <option value="Bartın">bartın</option>
-                                <option value="Batman">batman</option>
-                                <option value="Bayburt">bayburt</option>
-                                <option value="Bilecik">bilecik</option>
-                                <option value="Bingöl">bingöl</option>
-                                <option value="Bitlis">bitlis</option>
-                                <option value="Bolu">bolu</option>
-                                <option value="Burdur">burdur</option>
-                                <option value="Bursa">bursa</option>
-                                <option value="canakkale">canakkale</option>
-                                <option value="cankırı">cankırı</option>
-                                <option value="corum">corum</option>
-                                <option value="Denizli">denizli</option>
-                                <option value="Diyarbakır">diyarbakır</option>
-                                <option value="Düzce">düzce</option>
-                                <option value="Edirne">edirne</option>
-                                <option value="Elazığ">elazığ</option>
-                                <option value="Erzincan">erzincan</option>
-                                <option value="Erzurum">erzurum</option>
-                                <option value="Eskişehir">eskişehir</option>
-                                <option value="Gaziantep">gaziantep</option>
-                                <option value="Giresun">giresun</option>
-                                <option value="Gümüşhane">gümüşhane</option>
-                                <option value="Hakkari">hakkari</option>
-                                <option value="Hatay">hatay</option>
-                                <option value="Iğdır">iğdır</option>
-                                <option value="Isparta">isparta</option>
-                                <option value="icel">icel</option>
-                                <option value="Kahramanmaraş">kahramanmaraş</option>
-                                <option value="Karabük">karabük</option>
-                                <option value="Karaman">karaman</option>
-                                <option value="Kars">kars</option>
-                                <option value="Kastamonu">kastamonu</option>
-                                <option value="Kayseri">kayseri</option>
-                                <option value="Kırıkkale">kırıkkale</option>
-                                <option value="Kırklareli">kırklareli</option>
-                                <option value="Kırşehir">kırşehir</option>
-                                <option value="Kilis">kilis</option>
-                                <option value="Kocaeli">kocaeli</option>
-                                <option value="Konya">konya</option>
-                                <option value="Kütahya">kütahya</option>
-                                <option value="Malatya">malatya</option>
-                                <option value="Manisa">manisa</option>
-                                <option value="Mardin">mardin</option>
-                                <option value="Muğla">muğla</option>
-                                <option value="Muş">muş</option>
-                                <option value="Nevşehir">nevşehir</option>
-                                <option value="Niğde">niğde</option>
-                                <option value="Ordu">ordu</option>
-                                <option value="Osmaniye">osmaniye</option>
-                                <option value="Rize">rize</option>
-                                <option value="Sakarya">sakarya</option>
-                                <option value="Samsun">samsun</option>
-                                <option value="Siirt">siirt</option>
-                                <option value="Sinop">sinop</option>
-                                <option value="Sivas">sivas</option>
-                                <option value="Şanlıurfa">şanlıurfa</option>
-                                <option value="Şırnak">şırnak</option>
-                                <option value="Tekirdağ">tekirdağ</option>
-                                <option value="Tokat">tokat</option>
-                                <option value="Trabzon">trabzon</option>
-                                <option value="Tunceli">tunceli</option>
-                                <option value="Uşak">uşak</option>
-                                <option value="Van">van</option>
-                                <option value="Yalova">yalova</option>
-                                <option value="Yozgat">yozgat</option>
-                                <option value="Zonguldak">zonguldak</option>
-                            </select>
-
-                            <div class="small text-success pl-1 mt-1">Choose a destination to start planning</div>
-                        </div>
-
-                        <div class="form-row d-block d-md-flex position-relative mt-4  align-items-end trip_select_form">
-                            <label for="" class="where_label">Dates (optional)</label>
-                            <input type="text" name="datefilter4" value="" class="date-selection" placeholder="Start Date | End Date" />
+                    <ul class="nav nav-tabs justify-content-around" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active px-5 mt-2 mt-md-0" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                aria-selected="true">Estancia Corta</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link px-5 mt-2 mt-md-0" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
+                                aria-selected="false">Estancia Media</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link px-5 mt-2 mt-md-0" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Estancia Larga</button>
+                        </li>
+                    </ul><br>
+                    <!-- <form action="" class="filter-form d-flex mx-5 my-3">
+                        <div class="form-group d-flex">
+                            <label for="filter" class="tabs-font me-5 d-flex"><i
+                                    class="fa fa-filter d-flex align-items-center"></i>
+                                Filters:</label>
+                            <input type="text" class="form-control">
+                            <input type="text" class="form-control">
+                            <input type="text" class="form-control">
 
                         </div>
-                        <div class="mt-4 text-center">
-                            <a href="<?= base_url('activity');?>" class="btn btn_login btn_submit">Start planning</a>
-                            <!-- <button type="submit" value="Submit" class="btn btn_login btn_submit">Start planning</button> -->
+                    </form> -->
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="container-fluid">
+                                <div class="row b-list mb-4">
+                                    <!-- <div class="col-md-3 col-12 p-0">
+                                        <img src="./traveler-image8.jpg" alt="" class="img-fluid">
+                                    </div> -->
+                                    <div class="col-md-8 py-3">
+                                        <h3 class="tabs-font heading">Grecia</h3>
+                                        <p class="tabs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla fugiat itaque suscipit neque commodi magnam.</p>
+                                        <div class="time d-flex">
+                                            <div class="nights"><i class="fa fa-clock mx-md-2 mx-1"></i>4 Noches |</div>
+                                            <div class="nights"><i class="fa fa-house-tsunami mx-md-2 mx-1"></i>Ocio |</div>
+                                            <div class="nights"><i class="fa-solid fa-mountain-sun mx-md-2 mx-1"></i>turismo</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 fees py-3 d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="tabs-font mb-0">$350</h3>
+                                        <p class="tabs-font">/Per person</p>
+                                        <button class="btn btn-bookn">Book Now</button>
+                                    </div>
+                                </div>
+                                <div class="row b-list mb-4">
+                                    <!-- <div class="col-md-3 col-12 p-0">
+                                        <img src="./traveler-image8.jpg" alt="" class="img-fluid">
+                                    </div> -->
+                                    <div class="col-md-8 py-3">
+                                        <h3 class="tabs-font heading">Thilandia</h3>
+                                        <p class="tabs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla fugiat itaque suscipit neque commodi magnam.</p>
+                                        <div class="time d-flex">
+                                            <div class="nights"><i class="fa fa-clock mx-md-2 mx-1"></i>4 Noches |</div>
+                                            <div class="nights"><i class="fa fa-house-tsunami mx-md-2 mx-1"></i>Ocio |</div>
+                                            <div class="nights"><i class="fa-solid fa-mountain-sun mx-md-2 mx-1"></i>turismo</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 fees py-3 d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="tabs-font mb-0">$350</h3>
+                                        <p class="tabs-font">/Per person</p>
+                                        <button class="btn btn-bookn">Book Now</button>
+                                    </div>
+                                </div>
+                                <div class="row b-list mb-4">
+                                    <!-- <div class="col-md-3 col-12 p-0">
+                                        <img src="./traveler-image8.jpg" alt="" class="img-fluid">
+                                    </div> -->
+                                    <div class="col-md-8 py-3">
+                                        <h3 class="tabs-font heading">Noruega</h3>
+                                        <p class="tabs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla fugiat itaque suscipit neque commodi magnam.</p>
+                                        <div class="time d-flex">
+                                            <div class="nights"><i class="fa fa-clock mx-md-2 mx-1"></i>4 Noches |</div>
+                                            <div class="nights"><i class="fa fa-house-tsunami mx-md-2 mx-1"></i>Ocio |</div>
+                                            <div class="nights"><i class="fa-solid fa-mountain-sun mx-md-2 mx-1"></i>turismo</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 fees py-3 d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="tabs-font mb-0">$350</h3>
+                                        <p class="tabs-font">/Per person</p>
+                                        <button class="btn btn-bookn">Book Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="container-fluid">
+                                <div class="row b-list mb-4">
+                                    <!-- <div class="col-md-3 col-12 p-0">
+                                        <img src="./traveler-image8.jpg" alt="" class="img-fluid">
+                                    </div> -->
+                                    <div class="col-md-8 py-3">
+                                        <h3 class="tabs-font heading">Grecia</h3>
+                                        <p class="tabs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla fugiat itaque suscipit neque commodi magnam.</p>
+                                        <div class="time d-flex">
+                                            <div class="nights"><i class="fa fa-clock mx-md-2 mx-1"></i>4 Noches |</div>
+                                            <div class="nights"><i class="fa fa-house-tsunami mx-md-2 mx-1"></i>Ocio |</div>
+                                            <div class="nights"><i class="fa-solid fa-mountain-sun mx-md-2 mx-1"></i>turismo</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 fees py-3 d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="tabs-font mb-0">$350</h3>
+                                        <p class="tabs-font">/Per person</p>
+                                        <button class="btn btn-bookn">Book Now</button>
+                                    </div>
+                                </div>
+                                <div class="row b-list mb-4">
+                                    <!-- <div class="col-md-3 col-12 p-0">
+                                        <img src="./traveler-image8.jpg" alt="" class="img-fluid">
+                                    </div> -->
+                                    <div class="col-md-8 py-3">
+                                        <h3 class="tabs-font heading">Thilandia</h3>
+                                        <p class="tabs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla fugiat itaque suscipit neque commodi magnam.</p>
+                                        <div class="time d-flex">
+                                            <div class="nights"><i class="fa fa-clock mx-md-2 mx-1"></i>4 Noches |</div>
+                                            <div class="nights"><i class="fa fa-house-tsunami mx-md-2 mx-1"></i>Ocio |</div>
+                                            <div class="nights"><i class="fa-solid fa-mountain-sun mx-md-2 mx-1"></i>turismo</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 fees py-3 d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="tabs-font mb-0">$350</h3>
+                                        <p class="tabs-font">/Per person</p>
+                                        <button class="btn btn-bookn">Book Now</button>
+                                    </div>
+                                </div>
+                                <div class="row b-list mb-4">
+                                    <!-- <div class="col-md-3 col-12 p-0">
+                                        <img src="./traveler-image8.jpg" alt="" class="img-fluid">
+                                    </div> -->
+                                    <div class="col-md-8 py-3">
+                                        <h3 class="tabs-font heading">Noruega</h3>
+                                        <p class="tabs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla fugiat itaque suscipit neque commodi magnam.</p>
+                                        <div class="time d-flex">
+                                            <div class="nights"><i class="fa fa-clock mx-md-2 mx-1"></i>4 Noches |</div>
+                                            <div class="nights"><i class="fa fa-house-tsunami mx-md-2 mx-1"></i>Ocio |</div>
+                                            <div class="nights"><i class="fa-solid fa-mountain-sun mx-md-2 mx-1"></i>turismo</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 fees py-3 d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="tabs-font mb-0">$350</h3>
+                                        <p class="tabs-font">/Per person</p>
+                                        <button class="btn btn-bookn">Book Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="container-fluid">
+                                <div class="row b-list mb-4">
+                                    <!-- <div class="col-md-3 col-12 p-0">
+                                        <img src="./traveler-image8.jpg" alt="" class="img-fluid">
+                                    </div> -->
+                                    <div class="col-md-8 py-3">
+                                        <h3 class="tabs-font heading">Grecia</h3>
+                                        <p class="tabs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla fugiat itaque suscipit neque commodi magnam.</p>
+                                        <div class="time d-flex">
+                                            <div class="nights"><i class="fa fa-clock mx-md-2 mx-1"></i>4 Noches |</div>
+                                            <div class="nights"><i class="fa fa-house-tsunami mx-md-2 mx-1"></i>Ocio |</div>
+                                            <div class="nights"><i class="fa-solid fa-mountain-sun mx-md-2 mx-1"></i>turismo</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 fees py-3 d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="tabs-font mb-0">$350</h3>
+                                        <p class="tabs-font">/Per person</p>
+                                        <button class="btn btn-bookn">Book Now</button>
+                                    </div>
+                                </div>
+                                <div class="row b-list mb-4">
+                                    <!-- <div class="col-md-3 col-12 p-0">
+                                        <img src="./traveler-image8.jpg" alt="" class="img-fluid">
+                                    </div> -->
+                                    <div class="col-md-8 py-3">
+                                        <h3 class="tabs-font heading">Thilandia</h3>
+                                        <p class="tabs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla fugiat itaque suscipit neque commodi magnam.</p>
+                                        <div class="time d-flex">
+                                            <div class="nights"><i class="fa fa-clock mx-md-2 mx-1"></i>4 Noches |</div>
+                                            <div class="nights"><i class="fa fa-house-tsunami mx-md-2 mx-1"></i>Ocio |</div>
+                                            <div class="nights"><i class="fa-solid fa-mountain-sun mx-md-2 mx-1"></i>turismo</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 fees py-3 d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="tabs-font mb-0">$350</h3>
+                                        <p class="tabs-font">/Per person</p>
+                                        <button class="btn btn-bookn">Book Now</button>
+                                    </div>
+                                </div>
+                                <div class="row b-list mb-4">
+                                    <!-- <div class="col-md-3 col-12 p-0">
+                                        <img src="./traveler-image8.jpg" alt="" class="img-fluid">
+                                    </div> -->
+                                    <div class="col-md-8 py-3">
+                                        <h3 class="tabs-font heading">Noruega</h3>
+                                        <p class="tabs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla fugiat itaque suscipit neque commodi magnam.</p>
+                                        <div class="time d-flex">
+                                            <div class="nights"><i class="fa fa-clock mx-md-2 mx-1"></i>4 Noches |</div>
+                                            <div class="nights"><i class="fa fa-house-tsunami mx-md-2 mx-1"></i>Ocio |</div>
+                                            <div class="nights"><i class="fa-solid fa-mountain-sun mx-md-2 mx-1"></i>turismo</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 fees py-3 d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="tabs-font mb-0">$350</h3>
+                                        <p class="tabs-font">/Per person</p>
+                                        <button class="btn btn-bookn">Book Now</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

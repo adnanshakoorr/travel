@@ -30,14 +30,16 @@ class Login extends Front_Controller
           {
             $pass = $row['p'];
             $emailDb = $row['e'];
-            $name =	$row['fn'];
+            $name = $row['fn'];
+            $id =	$row['users_id'];
           }
 
           if($pass == $password && $email == $emailDb)
           {
             $session_data = array(				
               'e' => $email,
-              'fn' => $name,						
+              'fn' => $name,            
+              'users_id' => $id,						
             );	 
 
 

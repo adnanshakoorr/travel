@@ -19,20 +19,8 @@ class Home extends Front_Controller
 
 	}
 
-	//   public function contact()
-	// {	
-	// 	if ($_POST) 
-	// 		$content = array(
-	// 			'contact_name' =>	$this->input->post('contact_name',TRUE),
-	// 			'contact_email' => $this->input->post('contact_email', TRUE),
-	// 			'contact_phone' => $this->input->post('contact_phone',TRUE),
-	// 			'contact_message' => $this->input->post('contact_message',TRUE),
-	// 			'contact_status' => 'enable'
-	// 		);
-	// 		$data['table'] = 'contact';
-	// 		$this->general->insert($data,$content);
-	// 		redirect('home');
-	// }
+
+	
 
 }
 

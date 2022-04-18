@@ -104,7 +104,7 @@ header {
 }
 
 .selectize-control.multi .selectize-input .item{
-        cursor: pointer;
+    cursor: pointer;
     margin: 0 3px 3px 0;
     padding: 2px 8px;
     background: #b6d7a8;
@@ -259,6 +259,7 @@ header {
     margin-bottom: 0;
     padding: 20px;
     border: 1px solid #d7d6d6;
+    width: 100%;
     max-height: 217px;
     overflow-y: auto;
 }
@@ -409,6 +410,12 @@ footer {
     border-color: #b8d8aa;
 }
 
+.item.active .btn_login{
+    color: #b8d8aa !important;
+    background: white;
+    border-color: #b8d8aa;
+}
+
 .lodgings h1{
     font-size: 35px;
     font-weight: 600;
@@ -446,7 +453,7 @@ footer {
 }
 
 .form label{
-        font-size: 12px;
+    font-size: 12px;
     font-weight: 600;
     margin-bottom: 0px;
     color: #7d868e;
@@ -481,7 +488,7 @@ footer {
 
 .add-hotels{
     display: none;
-   
+    
 }
 
 .add-flights{
@@ -492,13 +499,13 @@ footer {
     display: block;
 }
 
-input[type="time"]::-webkit-calendar-picker-indicator {
+/*input[type="time"]::-webkit-calendar-picker-indicator {
     display: none;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
-}
+}*/
 
 /* ::-webkit-datetime-edit { color: transparent; }
 :focus::-webkit-datetime-edit { color: #000; } */
@@ -992,3 +999,195 @@ h6,
 
 
 /** Login 13 end **/
+
+
+.tabs{
+    box-shadow: 0px 0px 10px #0000001c;
+    padding: 20px 0px;
+    max-width: 900px;
+    position: relative;
+}
+
+.tabs-font{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.tabs .plan-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.tabs .nav-tabs .nav-link, .tabs .plan-btn{
+    border: 2px solid #9dc5e9;
+    background-color: #9dc5e9;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 0px;
+    border-radius: 7px;
+}
+
+.tabs .nav-tabs .nav-link.active {
+    border: 2px solid #b6d7a8;
+    background-color: white;
+    color: #b6d7a8;
+}
+
+.tabs .nav-tabs{
+    border-bottom: none;
+}
+
+.tabs .nav-tabs .nav-link:hover, .tabs .plan-btn:hover{
+    border: 2px solid #b6d7a8;
+    background-color: white;
+    color: #b6d7a8;
+}
+
+.tabs h1{
+    position: relative;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.tabs h1:before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    border-radius: 5px;
+    background-color: #9dc5e9;
+    width: 200px;
+    bottom: -10px;
+}
+
+/* .tabs .filter-form .form-group{
+
+} */
+
+.tabs .filter-form label{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.tabs .filter-form i{
+    color: #9dc5e9;
+}
+
+.tabs .filter-form input{
+    margin-right: 10px  ;
+}
+
+.tabs .tab-pane .time{
+    background-color: white;
+    width: fit-content;
+    padding: 0px 10px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+} 
+
+.tabs .tab-pane .time .nights i{
+    color: #9dc5e9;
+}
+
+.tabs .tab-pane .fees{
+    background-color: #b6d7a8;
+    color: white;
+}
+
+.tabs .tab-pane h3{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.tabs .b-list{
+    border-radius: 7px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tabs .b-list .heading{
+    color: black;
+}
+
+.tabs .btn-bookn{
+    background-color: white;
+    color: #b6d7a8;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.tabs .btn-bookn:hover{
+    color: #9dc5e9;
+}
+
+/* .tabs .tab-pane-in{
+    box-shadow: 0px 0px 10px rgba(182, 215, 168, 0.5);
+    border-radius: 5px;
+}
+
+.tabs .tab-pane h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: #b6d7a8;
+}
+
+.tabs .tab-pane p{
+    margin: 0px 20px;
+}
+
+.tabs .tab-pane h4{
+    margin: 0px 20px;
+    font-size: 18px;
+    font-weight: 600;
+} */
+
+@media only screen and (max-width: 900px){
+    .tabs{
+        max-width: 750px;
+    }
+    .tabs .tab-pane p {
+        /* margin: 0px; */
+        margin: 0px 10px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .tabs .filter-form .form-group{
+        flex-wrap: wrap;
+    }
+    .tabs{
+        max-width: 350px;
+    }
+    .tabs .tab-pane p {
+        /* margin: 0px; */
+        margin: 0px 5px;
+    }
+    .tabs .filter-form input{
+        margin-bottom: 5px;
+    }
+
+    .tabs .tab-pane h4{
+        margin: 0px 10px;
+    }
+    .tabs .plan-btn{
+        position: relative;
+        top: 30px;
+        right: 0px;
+    }    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+

@@ -10,7 +10,7 @@
                     <div class="row mb-5">
                         <div class="col-lg-6 col-12">
 
- <!--                            <?php if(!empty($hotel)) { ?>
+                            <?php if(!empty($hotel)) { ?>
                                 <h1>Hotels and lodgings</h1>
                                 <?php foreach($hotel as $data): ?>
                                     <div id="body">
@@ -41,7 +41,7 @@
                              <h4>No Hotels found</h4>
 
                          <?php } ?>
- -->
+
 
                          <button class="btn add-btn mb-2" id="add-hotel">+ Add lodging</button>
                                 <!-- <button class="btn add-btn mb-2"><i class="fa-solid fa-bed mr-2"></i><span>Find
@@ -103,7 +103,7 @@
                             </div>
 
                             <div class="col-lg-6 col-12">
-                                <!-- <?php if(!empty($flight)) { ?>
+                                <?php if(!empty($flight)) { ?>
                                     <?php foreach($flight as $data):?>
                                         <div id="body2">
                                             <h1>Flights</h1>
@@ -133,7 +133,7 @@
 
                                 <h4>No Flights found</h4>
 
-                            <?php } ?>  -->
+                            <?php } ?> 
                             <button class="btn add-btn mb-2" id="add-flight">+ Add flight</button>
 
 

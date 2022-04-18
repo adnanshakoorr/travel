@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class General extends CI_Model {
 
+	
 	public function get($data)
 	{		
 		if(isset($data['select']) && !empty($data['select'])){

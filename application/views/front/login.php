@@ -77,6 +77,7 @@
                                             </label>
                                         </div>
                                         <!-- <a href="forgot-password.html" class="link-light float-end forgot-password">Forgot password?</a> -->
+                                        <a href="<?= base_url('signup');?>" class="link-light float-end forgot-password">Register?</a>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-lg btn-theme">Login</button>
